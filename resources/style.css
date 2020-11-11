@@ -1,15 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0; margin: 0;
-    list-style: none;
+    list-style: none; font-family: Roboto, sans-serif, Arial, Helvetica;
 }
 
 html {
-    font-size: 16px;
+    font-size: 14px;
 }
 
-.container {
+header {
+    background-image: url("./images/blue_background_crop.png");
+    background-position: top center;
+    background-size: 450% 75vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.nav-link {
+    color: #FFFFFF !important;
+}.nav-link:hover {
+    color: #FFBB00 !important;
+}
+
+.banner-h1, .banner-desc {
+    color: #FFFFFF;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.banner {
+    margin: auto;
+}
+
+.banner-h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.banner-desc {
+    font-size: 1rem;
+}
+
+.img-container-banner {
+    display: none;
+}
+
+.carousel, .navbar {
+    padding-top: 2rem;
+}
+
+.logo-carousel {
+    display: none;
+}
+.ec-utbildning {
+    max-width: 150px;
+    height: auto;
     margin: 0 auto;
-    padding: 0 5%;
+    opacity: .6;
 }
 
+
+
+
+/* only for mobile */
+@media (max-width: 576px) {
+    
+
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    html {font-size: 16px;}
+    header {
+        background-size: 220%;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .img-container-banner {
+        display: inline-block;
+    }
+    header {
+        background-size: 140%;
+    } 
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header {
+        background-size: 120%;
+    } 
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}
+
+@media (min-width: 1300px) {
+    header {
+        background-size: 100% 80%;
+    }
+    .logo-carousel {
+        display: block;
+        margin-top: 15%;
+    }
+}
