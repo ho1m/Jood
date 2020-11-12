@@ -162,14 +162,16 @@ section {
     background-color: #3096FE;
 }
 
-.get-app-container {
+.get-app-content {
     background-image: url("./images/fff.png");
     background-size: cover;
     background-position: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .get-app h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #FFFFFF !important;
 }
 .get-app p{
@@ -182,7 +184,62 @@ section {
     margin-bottom: 1rem;
 }
 
+.app-img-container {
+    display: none;
+    width: 40%;
+    position: absolute;
+    bottom: -25%;
+    right: 0;
+}
 
+.get-app-mobile {
+    max-width: 100%;
+}
+
+.form-input {
+    display: grid;
+    grid-template: 50px 50px 100px / 1fr;
+    gap: 1.2rem 1.5rem;
+}
+
+.form-input * {
+    padding: 10px;
+    background-color: #FBFBFB;
+    border: none; border-radius: 12px;
+    outline: none;
+}
+
+.contact-btn {
+    margin-top: 1.5rem;
+    padding: .9em 5em;
+    color: #FFFFFF; background-color: #3096FE;
+    border: none; border-radius: 12px; outline: none;
+}
+
+/*  */
+
+footer {
+    position: relative;
+    
+    background-color: #3096FE;
+    background-image: url(./images/footerbg.png);
+    background-size: cover; background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+    margin: 1em 0;
+}
+.footer-links * {
+    margin: 0 .5rem;
+    color: #FFFFFF; font-weight: 500;
+} .social-media *{
+    margin: 0 .2em;
+}
 
 /* only for mobile */
 @media (max-width: 576px) {
@@ -197,6 +254,13 @@ section {
     header {
         height: 50vh;
         background-size: 220%;
+    }
+    .form-input {
+        grid-template: 70px 233px / 1fr 1fr;
+        gap: 1.2rem 1.5rem;
+    }
+    #message-input {
+        grid-column: 1/3;
     }
 }
 
@@ -235,7 +299,10 @@ section {
     .info-container-features {
         max-width: 55%;
     }
-    .img-container-features, .get-app-img-container {
+    .get-app-txtcont {
+        max-width: 60%;
+    }
+    .img-container-features, .app-img-container {
         display: inline-block;
     }
     .features-phone-bg {
