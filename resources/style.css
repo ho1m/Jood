@@ -15,7 +15,7 @@ header {
     background-position: top center;
     background-size: 450% 75vh;
     background-repeat: no-repeat;
-    height: 100vh;
+    overflow: hidden;
 }
 
 .nav-link {
@@ -59,13 +59,33 @@ header {
     opacity: .6;
 }
 
+.aboutus-phone-bg {
+    max-width: 100%;
+    position: absolute;
+}
+
+.phone-img {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.img-container-aboutus, .phone-img, .aboutus-phone-bg {
+    display: none;
+    flex: 0;
+}
+
+
+
+
+
+
 
 
 
 /* only for mobile */
 @media (max-width: 576px) {
-    
-
+    header {height: 80vh;}
 }
 
 
@@ -73,38 +93,48 @@ header {
 @media (min-width: 576px) {
     html {font-size: 16px;}
     header {
+        height: 50vh;
         background-size: 220%;
     }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .img-container-banner {
-        display: inline-block;
-    }
+    .img-container-banner {display: inline-block;}
     header {
         background-size: 140%;
-    } 
+        height: 80vh;
+    }
+    .phone-img, .aboutus-phone-bg {display: inline-block;}
+    .img-container-aboutus {
+        display: flex;
+        flex: 1;
+        margin-right: 5rem;
+    }
+    .info-container-aboutus {flex: 1;}
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     header {
         background-size: 120%;
-    } 
+        height: 80vh ;
+    }
+    .logo-carousel {
+        display: block;
+        margin-top: 25vh;
+    }
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    
+    header {height: 100vh;}
 }
 
 @media (min-width: 1300px) {
     header {
         background-size: 100% 80%;
+        height: 100vh;
     }
-    .logo-carousel {
-        display: block;
-        margin-top: 15%;
-    }
+    
 }
