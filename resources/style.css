@@ -31,6 +31,7 @@ section {
     color: #FFFFFF !important;
 }.nav-link:hover {
     color: #FFBB00 !important;
+    border-bottom: 2px solid #FFBB00;
 }
 
 .banner-h1, .banner-desc {
@@ -48,6 +49,10 @@ section {
 }
 .banner-desc {
     font-size: 1rem;
+}
+
+.banner-btns button:hover {
+    background-color: #FFBB00
 }
 
 .img-container-banner, .get-app-img-container {
@@ -279,6 +284,21 @@ footer {
     header {
         background-size: 120%;
         height: 80vh ;
+    }
+    .nav-link {
+        margin-left: 1rem;
+    }
+    .dl-btn img {
+        transition: transform .3s ease;
+    }
+    .dl-btn img:hover {
+        transform: scale(1.1);
+    }
+    .contact-btn {
+        transition: all .3s ease-in-out;
+    }
+    .contact-btn:hover, .foot-link img:hover {
+        background-color: #FFBB00 !important;
     }
 }
 
