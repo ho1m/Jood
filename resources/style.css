@@ -120,7 +120,7 @@ section {
 }
 
 .feature {
-    flex-basis: 300px;
+
     display: flex;
     align-items: flex-start; justify-content: center;
 }
@@ -276,7 +276,9 @@ footer {
         background-size: 140%;
         height: 80vh;
     }
-
+    .feature {
+        flex-basis: 300px;
+    }
 }
 
 /* // Large devices (desktops, 992px and up) */
